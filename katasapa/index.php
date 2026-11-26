@@ -13,12 +13,10 @@ $db=new Database();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KATASAPA - Komunitas Teater dan Sastra Perwira</title>
-    
-    <!-- Google Fonts: Playfair Display & Poppins -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+     
     <!-- Menghubungkan ke file CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -30,14 +28,14 @@ $db=new Database();
     <header class="navbar">
         <div class="logo-container">
             <img src="assets/img/logo_katasapa.jpg" alt="Logo Katasapa" class="logo-img" onerror="this.style.display='none'">
-            <div class="logo-text">
-                <h1>KATASAPA</h1>
-                <p>Komunitas Teater dan Sastra Perwira</p>
+            <div>
+                <h1 class="logo-text">KATASAPA</h1>
+                <p class="logo-subtext">Komunitas Teater dan Sastra Perwira</p>
             </div>
         </div>
 
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.php" class="active">Beranda</a></li>
                 <li><a href="tentang.php">Tentang Kami</a></li>
                 <li><a href="kegiatan.php">Kegiatan</a></li>
@@ -46,13 +44,14 @@ $db=new Database();
             </ul>
         </nav>
 
-        <a href="admin/login_user.php" class="btn-login">Admin</a>
+        <a href="admin/login_user.php" class="btn-login">Login</a>
     </header>
 
     <!-- ==========================================
          2. HERO SECTION (BANNER UTAMA)
          ========================================== -->
     <section id="beranda" class="hero">
+        
         <div class="hero-content">
             <h2>KATASAPA</h2>
             <h3>Komunitas Teater dan Sastra Perwira</h3>

@@ -9,9 +9,12 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #12100E; /* Hitam espresso hangat */
-    color: #E6DFD5;          /* Putih gading agar nyaman membaca naskah/karya */
+    background-color: #12100E;
     line-height: 1.7;
+    color: #f4f1ea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -23,79 +26,82 @@ a {
    2. NAVBAR / HEADER
    ========================================== */
 .navbar {
-    background-color: rgba(28, 25, 22, 0.92);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    border-bottom: 1px solid #2E2924;
+    padding: 20px 6%;
+    background-color: #171512;
+    border-bottom: 1px solid #2a251e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
+    gap: 15px;
 }
 
 .logo-img {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #c9a227;
 }
 
-.logo-text h1 {
+.logo-text {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    letter-spacing: 3px;
-    color: #F4EFE6;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f4f1ea;
+    letter-spacing: 0.5px;
 }
 
-.logo-text p {
-    font-size: 0.6rem;
-    color: #A39B8B;
+.logo-subtext {
+    font-size: 11px;
+    color: #9e988f;
     letter-spacing: 0.5px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .navbar nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 30px;
 }
 
 .navbar nav a {
-    color: #A39B8B;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #b5b0a8;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.navbar nav a:hover, 
-.navbar nav a.active {
-    color: #D4AF37;
-    border-bottom: 2px solid #D4AF37;
-    padding-bottom: 4px;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #c9a227;
 }
+
 
 .btn-login {
-    border: 1px solid #D4AF37;
-    color: #D4AF37;
-    padding: 0.4rem 1.4rem;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid #c9a227;
+    color: #c9a227;
+    padding: 8px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .btn-login:hover {
-    background-color: #D4AF37;
-    color: #12100E;
+    background-color: #c9a227;
+    color: #11100e;
 }
+
 
 /* ==========================================
    3. HERO SECTION (BANNER RUANG BACA & SASTRA)
@@ -107,7 +113,7 @@ a {
                     rgba(18, 16, 14, 0.80) 45%, 
                     rgba(18, 16, 14, 0.30) 100%
                 ), 
-                url('../img/hero_katasapa.jpg') center/cover no-repeat;
+                url('../img/profil.jpg') center/cover no-repeat;
     height: 500px;
     display: flex;
     align-items: center;
@@ -216,7 +222,7 @@ a {
 
 .section-title h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     border-left: 3px solid #D4AF37;
     padding-left: 12px;
     color: #F4EFE6;
@@ -373,9 +379,9 @@ a {
 }
 
 .quote-card span {
+    font-family: 'Poppins', sans-serif;
     font-size: 0.75rem;
     color: #D4AF37;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
 }
 
@@ -398,6 +404,9 @@ footer {
 @media (max-width: 900px) {
     .features, .agenda-grid {
         grid-template-columns: repeat(2, 1fr);
+        font-family:'Poppins', sans-serif;
+        font-size: 2.5rem;
+        color: #FFFFFF;
     }
     .about-quote-section {
         grid-template-columns: 1fr;
@@ -411,207 +420,7 @@ footer {
                         rgba(18, 16, 14, 0.88) 0%, 
                         rgba(18, 16, 14, 0.70) 100%
                     ), 
-                    url('../img/hero1_katasapa') center/cover no-repeat;
+                    url('../img/profil.jpg') center/cover no-repeat;
     }
 }
-
-/* =====================================
-   HALAMAN KARYA - KATASAPA
-===================================== */
-
-/* Pengaturan dasar halaman */
-body {
-    background-color: #12100E;
-    color: #F4EFE6;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Header halaman */
-.page-header {
-    position: relative;
-    padding: 90px 8%;
-    text-align: center;
-    background:
-        linear-gradient(rgba(18, 16, 14, 0.65), rgba(18, 16, 14, 0.75)),
-        url('../img/hero_karya.jpg') center/cover no-repeat;
-    border-bottom: 1px solid #332D26;
-}
-
-.page-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    font-weight: 600;
-    color: #D4AF37;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.page-header p {
-    max-width: 650px;
-    margin: 0 auto;
-    color: #C5BBAE;
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-/* Area konten */
-.content-container {
-    max-width: 1250px;
-    min-height: 60vh;
-    margin: auto;
-    padding: 75px 5%;
-}
-
-/* Grid karya */
-.karya-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-/* Kartu karya */
-.card-karya {
-    position: relative;
-    min-height: 310px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background: linear-gradient(145deg, #241F1B, #191613);
-    border: 1px solid #393027;
-    border-radius: 8px;
-
-    transition: all 0.35s ease;
-    overflow: hidden;
-}
-
-/* Aksen dekoratif kartu */
-.card-karya::before {
-    content: "“";
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    font-family: 'Playfair Display', serif;
-    font-size: 100px;
-    color: rgba(212, 175, 55, 0.08);
-    line-height: 1;
-}
-
-.card-karya:hover {
-    transform: translateY(-8px);
-    border-color: #D4AF37;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-/* Kategori karya */
-.kategori {
-    display: inline-block;
-    color: #D4AF37;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #D4AF37;
-    padding-bottom: 7px;
-    margin-bottom: 20px;
-}
-
-/* Judul karya */
-.card-karya h4 {
-    position: relative;
-    font-family: 'Playfair Display', serif;
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 1.5;
-    color: #F4EFE6;
-    margin-bottom: 15px;
-}
-
-/* Cuplikan karya */
-.cuplikan {
-    color: #B9AD9E;
-    font-size: 13px;
-    font-style: italic;
-    line-height: 1.9;
-}
-
-/* Informasi penulis */
-.penulis {
-    margin-top: 25px;
-    padding-top: 17px;
-    border-top: 1px solid #393027;
-    color: #938879;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-}
-
-/* Footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 25px 8%;
-    background-color: #0D0C0A;
-    border-top: 1px solid #332D26;
-    color: #A39B8B;
-    font-size: 12px;
-}
-
-footer strong {
-    color: #D4AF37;
-    letter-spacing: 2px;
-}
-
-footer a {
-    color: #D4AF37;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #F4EFE6;
-}
-
-/* Responsif tablet */
-@media (max-width: 900px) {
-    .karya-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .page-header h2 {
-        font-size: 42px;
-    }
-}
-
-/* Responsif HP */
-@media (max-width: 600px) {
-    .karya-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .page-header {
-        padding: 65px 7%;
-    }
-
-    .page-header h2 {
-        font-size: 35px;
-    }
-
-    .content-container {
-        padding: 45px 6%;
-    }
-
-    .card-karya {
-        min-height: 270px;
-        padding: 25px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 

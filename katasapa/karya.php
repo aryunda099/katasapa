@@ -12,11 +12,12 @@ $db=new Database();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karya - KATASAPA</title>
+    <title>KATASAPA - Komunitas Teater dan Sastra Perwira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/desain_karya.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="assets/css/karya.css">
 </head>
 <body class="halaman-karya">
 
@@ -34,11 +35,11 @@ $db=new Database();
                 <li><a href="index.php">Beranda</a></li>
                 <li><a href="tentang.php">Tentang Kami</a></li>
                 <li><a href="kegiatan.php">Kegiatan</a></li>
-                <li><a href="karya.php">Karya</a></li>
+                <li><a href="kegiatan.php" class="active">Karya</a></li>
                 <li><a href="dokumentasi.php">Dokumentasi</a></li>
             </ul>
         </nav>
-        <a href="login.php" class="btn-login">Login</a>
+        <a href="admin/login_user.php" class="btn-login">Login</a>
     </header>
 
     <!-- BANNER HEADER HALAMAN -->

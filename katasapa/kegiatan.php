@@ -14,10 +14,10 @@ $db=new Database();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kegiatan & Agenda - KATASAPA</title>
+    <title>Tentang Kami - KATASAPA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/kegiatan.css">
 </head>
 <body class="halaman-kegiatan">
@@ -25,7 +25,7 @@ $db=new Database();
     <!-- HEADER / NAVBAR -->
     <header class="navbar">
         <div class="logo-container">
-            <img src="assets/img/logo_katasapa.jpg" alt="Logo Katasapa" class="logo-img" onerror="this.style.display='none'">
+            <img src="assets/img/logo_katasapa.jpg" alt="Logo Katasapa" class="logo-img">
             <div>
                 <h1 class="logo-text">KATASAPA</h1>
                 <p class="logo-subtext">Komunitas Teater dan Sastra Perwira</p>
@@ -40,7 +40,9 @@ $db=new Database();
                 <li><a href="dokumentasi.php">Dokumentasi</a></li>
             </ul>
         </nav>
-        <a href="login.php" class="btn-login">Login</a>
+        <div class="nav-btn">
+            <a href="admin/login_user.php" class="btn-login">Login</a>
+        </div>
     </header>
 
     <!-- BANNER HEADER HALAMAN -->

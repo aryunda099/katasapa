@@ -33,9 +33,9 @@ $db = new Database();
                 <span>Panel Admin Kesenian</span>
             </div>
             <nav class="sidebar-menu">
-                <a href="index.php" class="active">Kelola Karya Sastra</a>
-                <a href="#">Kelola Kegiatan</a>
-                <a href="#">Dokumentasi</a>
+                <a href="kelola_karya.php" class="active">Kelola Karya Sastra</a>
+                <a href="kelola_kegiatan.php">Kelola Kegiatan</a>
+                <a href="kelola_dokumentasi.php">Dokumentasi</a>
                 <a href="../karya.php" target="_blank" class="btn-lihat-web">Lihat Halaman Karya &nearr;</a>
                 <a href="../index.php" class="btn-logout">Kembali ke Beranda</a>
             </nav>
